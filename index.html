@@ -1,140 +1,20 @@
+<!DOCTYPE html>
 <html>
 <head>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
- :root {
-  --secoColor: #555555;
-  --cornerRad: 4px;
-}
-body {
-  background-color: var(--primColor);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
-}
-details {
-  margin: 40px;
-}
-summary {
-  writing-mode: vertical-lr;
-  text-align: center;
-  padding: 12px 10px;
-  width: 23px;
-  height: 17px;
-  background-color: var(--primColor);
-  border: 2px solid var(--secoColor);
-  border-radius: var(--cornerRad);
-  color: var(--secoColor);
-  cursor: pointer;
-  user-select: none;
-  outline: none;
-  transition: transform 200ms ease-in-out 0s;
-}
-summary::before,
-summary::after {
-  position: static;
-  top: 0;
-  left: 0;
-}
-summary::before {
-  content: "";
-}
-summary::after {
-  content: "III";
-  letter-spacing: -1px;
-}
-summary:hover {
-  transform: scale(1.1);
-}
-summary::marker {
-  font-size: 0;
-}
-summary::-webkit-details-marker {
-  display: none;
-}
-details[open] .menu {
-  animation-name: menuAnim;
-}
-details[open] summary::before {
-  content: "X";
-}
-details[open] summary::after {
-  content: "";
-}
-.menu {
-  height: 0;
-  width: fit-content;
-  border-radius: var(--cornerRad);
-  background-color: var(--primColor);
-  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
-  margin-top: 8px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
-  animation: closeMenu 300ms ease-in-out forwards;
-}
-.menu a {
-  padding: 12px 24px;
-  margin: 0 16px;
-  color: var(--secoColor);
-  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-  text-decoration: none;
-  text-align: center;
-  transition: filter 200ms linear 0s;
-}
-.menu a:nth-of-type(1) {
-  padding-top: 24px;
-}
-.menu a:nth-last-of-type(1) {
-  border-bottom: none;
-}
-.menu a:hover {
-  filter: brightness(200%);
-}
-details::before {
-  color: var(--secoColor);
-  position: absolute;
-  margin-left: 80px;
-  padding: 10px 10px;
-  opacity: 0.4;
-}
-details[open]::before {
-  animation: fadeMe 300ms linear forwards;
-}
-@keyframes menuAnim {
-  0% {
-    height: 0;
-  }
-  100% {
-    height: 312px;
-  }
-}
-@keyframes fadeMe {
-  0% {
-    opacity: 0.4;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-    </style>
 <style>
-    body {
-  background-image: url('https://media.istockphoto.com/vectors/abstract-blurred-colorful-background-vector-id1248542684?k=20&m=1248542684&s=612x612&w=0&h=1yKiRrtPhiqUJXS_yJDwMGVHVkYRk2pJX4PG3TT4ZYM=');
+div {
+  border: 1px solid black;
+  margin-top: 20px;
+  margin-bottom: 100px;
+  margin-right: 300px;
+  margin-left: 300px;
+  background-image: url('https://64.media.tumblr.com/1e87a76c7e8249ee9ad8ca6f92ed5077/tumblr_o8ht77gPXh1to2m3po1_640.png');
+}
 </style>
-    </head>
-    <body>
-    
-<details>
-  <summary></summary>
-  <nav class="menu">
-    <a href="#link">Home</a>
-    <a href="#link">Work</a>
-    <a href="#link">Links</a>
-    <a href="#link">Contact</a>
-    <a href="#link">About</a>
-  </nav>
-</details>
+</head>
+<body>
+
+<div>This div element has a top margin of 100px, a right margin of 150px, a bottom margin of 100px, and a left margin of 80px.</div>
+
 </body>
 </html>
