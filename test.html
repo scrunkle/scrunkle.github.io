@@ -1,44 +1,66 @@
+<!DOCTYPE html>
+
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-    * {
-      box-sizing: border-box;
-    }
-    
-    /* Create three equal columns that floats next to each other */
-    .column {
-      float: left;
-      width: 33.33%;
-      padding: 10px;
-      height: 300px; /* Should be removed. Only for demonstration */
-    }
-    
-    /* Clear floats after the columns */
-    .row:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-    </style>
-    </head>
-    <body>
-    
-    <h2>test</h2>
-    
-    <div class="row">
-      <div class="column" style="background-color:#aaa;">
-        <h2>test</h2>
-        <p>Some text..</p>
-      </div>
-      <div class="column" style="background-color:#bbb;">
-        <h2>Column 2</h2>
-        <p>this is a new page</p>
-      </div>
-      <div class="column" style="background-color:#ccc;">
-        <h2>Column 3</h2>
-        <p>test..</p>
-      </div>
-    </div>
-</body>
+<style>
+.fadein {
+    position:absolute;
+    top:0px;
+    left:50%;
+    margin:auto;
+}
+.fadein img {
+    position:absolute;
+    left:-65px;
+    top:0;
+    -webkit-animation-name: fade;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 6s;
+    animation-name: fade;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+}
+
+@-webkit-keyframes fade {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    33% {opacity: 1;}
+    53% {opacity: 0;}
+    100% {opacity: 0;}
+}
+@keyframes fade {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    33% {opacity: 1;}
+    53% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+#f1 {
+    background-color: lightblue;
+}
+#f2 {
+    -webkit-animation-delay: -4s;
+    background-color: yellow;
+}
+#f3 {
+    -webkit-animation-delay: -2s;
+    background-color: lightgreen;
+}
+
+.paper {
+-webkit-mask-image: url(https://i.ibb.co/KhqQW5x/73696-B1-E-A0-D7-4529-B2-D2-FB27-F0-D5-B437.png);
+-webkit-mask-size: 100%;
+-webkit-mask-repeat: no-repeat;
+-webkit-mask-position: top;
+}
+</style>
+   </head>
+
+<div class="fadein">
+    <img id="f3" src="https://i.pinimg.com/originals/1b/87/4d/1b874d2a095a4a70d60db3af461e27dd.gif" class="paper">
+    <img id="f2" src="https://i.pinimg.com/564x/c0/3d/67/c03d67cedc3bb6b079bd4f152615b82c.jpg" class="paper">
+    <img id="f1" src="https://i.pinimg.com/originals/9f/af/7f/9faf7fb19db171dfcce54cc75311eeba.gif" class="paper">
+</div>
+   </body>
 </html>
